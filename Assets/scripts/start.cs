@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class start : MonoBehaviour
 {
@@ -13,6 +14,15 @@ public class start : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKey("space"))
+        {
+            NextLevel();
+        }
     }
+     
+      private void NextLevel()
+   {
+       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
+   }
+
 }
