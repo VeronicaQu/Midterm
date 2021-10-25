@@ -1324,3 +1324,4 @@ Received Import Request.
 Start importing Assets/Scenes/LevelTwo.unity using Guid(2c12831fea144544893c1e8836a04883) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fc9863a4e100bf6aabf30fe6ff3386c') in 0.002844 seconds 
   Import took 0.005811 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
