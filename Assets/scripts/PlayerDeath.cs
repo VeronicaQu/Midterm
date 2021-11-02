@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class PlayerDeath : MonoBehaviour
 {
     private Rigidbody2D rb;
+     [SerializeField] private AudioSource deathSoundEffect;
+
 
   private void Start()
   {
@@ -16,13 +18,14 @@ public class PlayerDeath : MonoBehaviour
   {
       if(collision.gameObject.CompareTag("trap"))
       {
+          deathSoundEffect.Play();
           RestartLevel();
       }
   }
 
   private void RestartLevel()
   {
-      Score.scoreValue = 0;
+      //Score.scoreValue = 0;
       SceneManager.LoadScene(SceneManager.GetActiveScene().name);
   }
 
